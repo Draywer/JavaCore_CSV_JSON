@@ -16,6 +16,6 @@ public class Main
         CSVFile.about();
 
         String csvFile = "test.csv";
-        CSVFile.createCSVFile("1;John;Smith;USA;25", csvFile, Delimiter.DELIMITER_SEMICOLON, true );
+        CSVFile.createCSVFile("1,John,Smith,USA,25", csvFile, Delimiter.DELIMITER_COMMA, true );
     }
 }
