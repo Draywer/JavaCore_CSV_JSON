@@ -1,3 +1,3 @@
-firstName; lastName; visitsToWebsite
-John; Doe; 12
-Jane; Doe; 23
+id; firstName; secondName; country; age
+1; John; Doe; USA; 12
+2; Jane; Smith; Canada; 23
