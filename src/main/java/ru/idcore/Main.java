@@ -1,5 +1,7 @@
 package ru.idcore;
 
+import ru.idcore.service.JSONFile;
+
 import java.io.IOException;
 import java.util.*;
 
@@ -14,6 +16,15 @@ public class Main {
 
         list.forEach(System.out::println);
 
+
+        JSONFile<Employee> employeeJSONFile = new JSONFile<>();
+        String employeeJSON = employeeJSONFile.getJSONString(list);
+
+        System.out.println(employeeJSON);
+
+        if(employeeJSONFile.writeJSONFile(employeeJSON, "test.json")) {
+            System.out.println("Файл json создан");
+        }
 
     }
 
