@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<staff>
+    <employee>
+        <id>1</id>
+        <firstName>John</firstName>
+        <secondName>Smith</secondName>
+        <country>USA</country>
+        <age>25</age>
+    </employee>
+    <employee>
+        <id>2</id>
+        <firstName>Inav</firstName>
+        <secondName>Petrov</secondName>
+        <country>RU</country>
+        <age>23</age>
+    </employee>
+    <employee>
+        <id>3</id>
+        <firstName>Alex</firstName>
+        <secondName>Gnatenko</secondName>
+        <country>RU</country>
+        <age>49</age>
+    </employee>
+</staff>
