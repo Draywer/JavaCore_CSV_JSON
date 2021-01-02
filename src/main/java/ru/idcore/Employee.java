@@ -1,30 +1,25 @@
 package ru.idcore;
 
-import com.opencsv.bean.CsvBindByName;
-import com.opencsv.bean.CsvBindByPosition;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 import java.util.Objects;
 
+@XmlRootElement(name = "employee")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Employee {
-    @CsvBindByName
-    private long id;
 
-    @CsvBindByName
+    private int id;
     private String firstName;
-
-    @CsvBindByName
     private String secondName;
-
-    @CsvBindByName
     private String country;
-
-    @CsvBindByName
     private int age;
 
     public Employee() {
     }
 
-    public Employee(long id, String firstName, String secondName, String country, int age) {
+    public Employee(int id, String firstName, String secondName, String country, int age) {
         this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
@@ -32,11 +27,11 @@ public class Employee {
         this.age = age;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
