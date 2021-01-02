@@ -7,26 +7,19 @@
 ## 03. Курс JavaCore
 ### 03.05 Работа с файлами CSV, XML, JSON
 
-Задача 1: CSV - JSON парсер
+##### Задача 1: CSV - JSON
+##### Задача 2: XML - JSON
+##### Задача 3: JSON - Java Object
 
-##### MANIFEST.MF
+
+##### 
 ~~~text
-Manifest-Version: 1.0
-Created-By: Apache Maven 3.6.1
-Built-By: User
-Build-Jdk: 14.0.2
-Package: ru.idcore
-Class-Path: lib/csv-json-xml-lib-1.0-SNAPSHOT.jar lib/opencsv-5.1.jar li
- b/commons-lang3-3.9.jar lib/commons-text-1.8.jar lib/commons-beanutils-
- 1.9.4.jar lib/commons-logging-1.2.jar lib/commons-collections-3.2.2.jar
-  lib/commons-collections4-4.4.jar lib/json-simple-1.1.1.jar lib/gson-2.
- 8.5.jar
-Specification-Title: JavaCore_CSV_JSON
-Specification-Version: 1.0
-Implementation-Title: JavaCore_CSV_JSON
-Implementation-Version: 1.0-SNAPSHOT
-Implementation-Vendor-Id: ru.idcore
-Implementation-URL: http://www.idcore.ru
-Main-Class: ru.idcore.Main
+Файл task1.csv преобразован в csv_to_json.json
+Файл task2.xml преобразован в xml_to_json.json
+
+Список работников из task3.json
+Employee{id=1, firstName='John', secondName='Smith', country='USA', age=25}
+Employee{id=2, firstName='Inav', secondName='Petrov', country='RU', age=23}
+Employee{id=3, firstName='Alex', secondName='Gnatenko', country='RU', age=49}
 
 ~~~
