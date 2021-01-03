@@ -47,7 +47,7 @@ public class Main {
 
         //запись массива объектов Employee в json-файл
         JSONFile<Employee> employeeJSONFileFromXML = new JSONFile<>();
-        if (employeeJSONFileFromCSV.writeJSONFile(xmlJsonFile, empXMLList)) {
+        if (employeeJSONFileFromXML.writeJSONFile(xmlJsonFile, empXMLList)) {
             System.out.println("Файл " + xmlFile + " преобразован в " + xmlJsonFile);
         }
 
