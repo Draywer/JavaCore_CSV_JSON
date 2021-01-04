@@ -39,9 +39,9 @@ class EmployeeXMLTest {
     }
 
     @Test
-    @DisplayName("Тест №3: Получение класса параметра")
+    @DisplayName("Тест №1: Получение класса параметра")
     void getType() {
-        System.out.println("Тест №3: Получение класса параметра");
+        System.out.println("Тест №1: Получение класса параметра");
         assertEquals(staff.getClass(), employeeXML.getType(), "ОШИБКА! Классы не совпадают");
         System.out.println("Пройден");
     }
