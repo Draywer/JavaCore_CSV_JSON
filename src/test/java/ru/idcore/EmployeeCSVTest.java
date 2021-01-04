@@ -1,7 +1,6 @@
 package ru.idcore;
 
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.provider.CsvSource;
 import ru.idcore.service.Separator;
 
 import java.io.File;
