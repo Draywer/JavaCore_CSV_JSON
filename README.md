@@ -11,8 +11,7 @@
 ##### Задача 2: XML - JSON
 ##### Задача 3: JSON - Java Object
 
-
-##### 
+###### Лог к задачам на конвертер
 ~~~ text
 Файл task1.csv преобразован в csv_to_json.json
 Файл task2.xml преобразован в xml_to_json.json
@@ -24,23 +23,43 @@ Employee{id=3, firstName='Alex', secondName='Gnatenko', country='RU', age=49}
 
 ~~~
 
-##### Тестирование EmployeeCSV
+##### Лог к задачам на Тестирование
+1. Для классов EmployeeCSV и EmployeeXML написаны unit тесты
+2. Для класса Staff написаны Hamcrest тесты
 ~~~ text
-"C:\Program Files\Java\jdk-14.0.2\bin\java.exe" -ea -Didea.test.cyclic.buffer.size=1048576 "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\lib\idea_rt.jar=52429:C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\plugins\junit\lib\junit5-rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\plugins\junit\lib\junit-rt.jar;C:\Users\User\IdeaProjects\JavaCore_CSV_JSON\target\test-classes;C:\Users\User\IdeaProjects\JavaCore_CSV_JSON\target\classes;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\User\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\User\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\User\.m2\repository\ru\idcore\csv-json-xml-lib\1.0.1\csv-json-xml-lib-1.0.1.jar;C:\Users\User\.m2\repository\com\google\code\gson\gson\2.8.5\gson-2.8.5.jar;C:\Users\User\.m2\repository\com\sun\xml\bind\jaxb-impl\3.0.0-M2\jaxb-impl-3.0.0-M2.jar;C:\Users\User\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.0-RC3\jakarta.xml.bind-api-3.0.0-RC3.jar;C:\Users\User\.m2\repository\com\sun\xml\bind\jaxb-core\3.0.0-M2\jaxb-core-3.0.0-M2.jar;C:\Users\User\.m2\repository\com\sun\activation\jakarta.activation\2.0.0-RC3\jakarta.activation-2.0.0-RC3.jar;C:\Users\User\.m2\repository\com\opencsv\opencsv\5.3\opencsv-5.3.jar;C:\Users\User\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\User\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar;C:\Users\User\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\User\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\User\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\User\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter\5.4.2\junit-jupiter-5.4.2.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.4.2\junit-jupiter-params-5.4.2.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-launcher\1.7.0\junit-platform-launcher-1.7.0.jar" com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 ru.idcore.EmployeeCSVTest
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ru.idcore.EmployeeCSVTest
 Тестирование класса EmployeeCSV...
-
 Тест №3: Получение класса параметра
 Пройден
-
-
 Тест №2: Запись массива объектов в csv - файл
 Пройден
-
-
 Тест №1: Получение массива объектов из csv файла
 Пройден
-
 Тестовый файл test_write_csv_with_stategy.csv удален
-
-Process finished with exit code 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.531 s - in ru.idcore.EmployeeCSVTest
+[INFO] Running ru.idcore.EmployeeXMLTest
+Тестирование класса EmployeeXML...
+Тест №1: Получение класса параметра
+Пройден
+Тест №2: Получение массива объектов из csv файла
+Пройден
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.864 s - in ru.idcore.EmployeeXMLTest
+[INFO] Running ru.idcore.StaffTest
+Тестирование класса Staff...
+Тест №1: Получение массива объектов из csv файла
+Пройден
+Тест №3: Массив содержит необходимые данные
+Пройден
+Тест №4: Массив объектов пустой
+Пройден
+Тест №2: Массивы содержат одинаковые данные без учета их расположения в массиве
+Пройден
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 s - in ru.idcore.StaffTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
 ~~~
