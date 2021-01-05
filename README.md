@@ -33,33 +33,31 @@ Employee{id=3, firstName='Alex', secondName='Gnatenko', country='RU', age=49}
 [INFO] Running ru.idcore.EmployeeCSVTest
 Тестирование класса EmployeeCSV...
 Тест №3: Получение класса параметра
-Пройден
 Тест №2: Запись массива объектов в csv - файл
-Пройден
 Тест №1: Получение массива объектов из csv файла
-Пройден
 Тестовый файл test_write_csv_with_stategy.csv удален
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.531 s - in ru.idcore.EmployeeCSVTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.539 s - in ru.idcore.EmployeeCSVTest
 [INFO] Running ru.idcore.EmployeeXMLTest
 Тестирование класса EmployeeXML...
 Тест №1: Получение класса параметра
-Пройден
-Тест №2: Получение массива объектов из csv файла
-Пройден
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.864 s - in ru.idcore.EmployeeXMLTest
+Тест №2: Получение массива объектов из xml файла
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.504 s - in ru.idcore.EmployeeXMLTest
 [INFO] Running ru.idcore.StaffTest
 Тестирование класса Staff...
-Тест №1: Получение массива объектов из csv файла
-Пройден
+Тест №1: Проверка размера массива
 Тест №3: Массив содержит необходимые данные
-Пройден
 Тест №4: Массив объектов пустой
-Пройден
 Тест №2: Массивы содержат одинаковые данные без учета их расположения в массиве
-Пройден
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 s - in ru.idcore.StaffTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in ru.idcore.StaffTest
 [INFO] 
 [INFO] Results:
 [INFO] 
 [INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.043 s
+[INFO] Finished at: 2021-01-05T14:54:43+03:00
+[INFO] ------------------------------------------------------------------------
 ~~~

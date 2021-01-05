@@ -29,7 +29,7 @@ class StaffTest {
     @Test
     @DisplayName("Тест №1: Проверка размера массива")
     public void givenAList_whenChecksSize_thenCorrect() {
-        System.out.println("Тест №1: Получение массива объектов из csv файла");
+        System.out.println("Тест №1: Проверка размера массива");
         assertThat(staff.getList(), hasSize(3));
     }
 

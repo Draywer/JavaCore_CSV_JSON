@@ -31,9 +31,9 @@ class EmployeeXMLTest {
     }
 
     @Test
-    @DisplayName("Тест №2: Получение массива объектов из csv файла")
+    @DisplayName("Тест №2: Получение массива объектов из xml файла")
     void getObjFromXMLFile() {
-        System.out.println("Тест №2: Получение массива объектов из csv файла");
+        System.out.println("Тест №2: Получение массива объектов из xml файла");
         assertTrue(staff.getList().containsAll(employeeXML.getObjFromXMLFile(xmlFile).getList()),
                 "ОШИБКА! Массивы объектов не совпадают");
     }
