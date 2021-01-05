@@ -31,7 +31,6 @@ class StaffTest {
     public void givenAList_whenChecksSize_thenCorrect() {
         System.out.println("Тест №1: Получение массива объектов из csv файла");
         assertThat(staff.getList(), hasSize(3));
-        System.out.println("Пройден");
     }
 
     @Test
@@ -45,7 +44,6 @@ class StaffTest {
 
         assertThat(staff.getList(),
                 containsInAnyOrder(employeeList.toArray()));
-        System.out.println("Пройден");
     }
 
     @Test
@@ -54,7 +52,6 @@ class StaffTest {
         System.out.println("Тест №3: Массив содержит необходимые данные");
         assertThat(new Employee(1, "John", "Smith", "USA", 25),
                 isOneOf(staff.getList().toArray()));
-        System.out.println("Пройден");
     }
 
     @Test
@@ -62,10 +59,9 @@ class StaffTest {
     public void givenCollection_whenEmpty_thenCorrect() {
         System.out.println("Тест №4: Массив объектов пустой");
         Staff staff = new Staff();
-        staff.setList(new ArrayList<Employee>());
+        staff.setList(new ArrayList<>());
 
         assertThat(staff.getList(), empty());
-        System.out.println("Пройден");
     }
 
 }

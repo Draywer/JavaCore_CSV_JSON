@@ -20,7 +20,6 @@ class EmployeeCSVTest {
     private Character separator;
 
 
-
     @BeforeAll
     public static void globalSetUp() {
         System.out.println("Тестирование класса EmployeeCSV...");
@@ -35,9 +34,9 @@ class EmployeeCSVTest {
         strategy = new String[]{"id", "firstName", "secondName", "country", "age"};
         separator = Separator.SEPARATOR_SEMICOLON.getSeparator();
         employeeList = new ArrayList<>();
-        employeeList.add(new Employee(1,"John","Doe","USA",12));
-        employeeList.add(new Employee(2,"Jane","Smith","Canada",23));
-        employeeList.add(new Employee(3,"Alex","Gnatenko","Russia",49));
+        employeeList.add(new Employee(1, "John", "Doe", "USA", 12));
+        employeeList.add(new Employee(2, "Jane", "Smith", "Canada", 23));
+        employeeList.add(new Employee(3, "Alex", "Gnatenko", "Russia", 49));
     }
 
 //    @AfterEach
@@ -48,8 +47,8 @@ class EmployeeCSVTest {
     static void deleteCSVFile() {
 
         File file = new File(csvTestFile);
-        if(file.delete()){
-            System.out.println("Тестовый файл " +  csvTestFile + " удален");
+        if (file.delete()) {
+            System.out.println("Тестовый файл " + csvTestFile + " удален");
         }
     }
 
@@ -58,11 +57,11 @@ class EmployeeCSVTest {
     @DisplayName("Тест №1: Получение массива объектов из csv файла")
     void getObjFromCSVFileWithStrategy() {
         System.out.println("Тест №1: Получение массива объектов из csv файла");
-        assertEquals(employeeList, employeeCSV.getObjFromCSVFileWithStrategy(
+        assertTrue(employeeList.containsAll(employeeCSV.getObjFromCSVFileWithStrategy(
                 csvFile,
                 separator,
-                strategy), "ОШИБКА! Массивы объектов не одинаковые");
-        System.out.println("Пройден");
+                strategy)),
+                "ОШИБКА! Массивы объектов не одинаковые");
     }
 
     @Test
@@ -76,11 +75,11 @@ class EmployeeCSVTest {
                 strategy);
         File file = new File(csvTestFile);
         assertTrue(file.exists(), "ОШИБКА! Файл " + csvTestFile + " не создан");
-        assertEquals(employeeList, employeeCSV.getObjFromCSVFileWithStrategy(
+        assertTrue(employeeList.containsAll(employeeCSV.getObjFromCSVFileWithStrategy(
                 csvTestFile,
                 separator,
-                strategy), "ОШИБКА! Массивы объектов не одинаковые");
-        System.out.println("Пройден");
+                strategy)),
+                "ОШИБКА! Массивы объектов не одинаковые");
     }
 
     @Test
@@ -89,6 +88,5 @@ class EmployeeCSVTest {
         System.out.println("Тест №3: Получение класса параметра");
         Employee employee = new Employee();
         assertEquals(employee.getClass(), employeeCSV.getType(), "ОШИБКА! Классы не совпадают");
-        System.out.println("Пройден");
     }
 }

@@ -34,15 +34,15 @@ class EmployeeXMLTest {
     @DisplayName("Тест №2: Получение массива объектов из csv файла")
     void getObjFromXMLFile() {
         System.out.println("Тест №2: Получение массива объектов из csv файла");
-        assertEquals(staff.getList(), employeeXML.getObjFromXMLFile(xmlFile).getList(), "ОШИБКА! Массивы объектов не совпадают");
-        System.out.println("Пройден");
+        assertTrue(staff.getList().containsAll(employeeXML.getObjFromXMLFile(xmlFile).getList()),
+                "ОШИБКА! Массивы объектов не совпадают");
     }
 
     @Test
     @DisplayName("Тест №1: Получение класса параметра")
     void getType() {
         System.out.println("Тест №1: Получение класса параметра");
-        assertEquals(staff.getClass(), employeeXML.getType(), "ОШИБКА! Классы не совпадают");
-        System.out.println("Пройден");
+        assertEquals(staff.getClass(), employeeXML.getType(),
+                "ОШИБКА! Классы не совпадают");
     }
 }
